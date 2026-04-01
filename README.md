@@ -6,7 +6,7 @@
 ### Fraud vs Non-Fraud Transactions
 This shows the imbalance in dataset where fraud cases are very rare.
 
-![Fraud Distribution](images/Images_Fraud_Vs_Non-Fraud_Transactions)
+![Fraud Distribution](images/Images_Fraud_Vs_Non-Fraud_Transactions.png)
 
 ---
 
