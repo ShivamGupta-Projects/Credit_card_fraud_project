@@ -1,39 +1,51 @@
-# Credit_card_fraud_project
-"Built a fraud detection model achieving 99% accuracy with end-to-end Machine Learning pipeline to detect fraudulent credit card transactions using SMOTE for imbalance data handling and Random Forest for classification."
+# Machine Learning Classification Web App
 
-##  Visualizations
+This project is an end-to-end machine learning web application built using Streamlit.
 
-### Fraud vs Non-Fraud Transactions
-This shows the imbalance in dataset where fraud cases are very rare.
+## Overview
 
-![Fraud Distribution](images/Images_Fraud_Vs_Non-Fraud_Transactions.png)
+This application allows users to upload any CSV dataset, select a target column, and automatically train multiple machine learning models to find the best one.
 
----
+## Features
 
-### Confusion Matrix
-Model performance showing correct and incorrect predictions.
+- Upload any CSV file
+- Select target column dynamically
+- Automatic preprocessing (missing values, outliers, encoding)
+- Conditional SMOTE for imbalanced data
+- Multiple ML models:
+  - Logistic Regression
+  - Decision Tree
+  - Random Forest
+  - KNN
+  - SVM
+- Model comparison
+- Confusion Matrix
+- Best model selection
+- Target distribution
 
-![Confusion Matrix](images/Images_Confusion_Matrix.png)
+## Tech Stack
 
----
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Streamlit
+- Matplotlib
+- Seaborn
+- Imbalanced-learn
 
-### Precision-Recall Curve
-Precision-Recall Curve illustrating the model's efficiency in balancing detection accuracy and fraud identification.
+## How to Run
 
-![Precision-Recall Curve](images/Images_Precision_Recall_Curve.png)
+1. Install dependencies:
+pip install -r requirements.txt
 
----
+2. Run app:
+streamlit run app.py
 
-### Feature Importance
-This highlights the most important variables that drive the model's decision-making process in detecting fraudulent activities.
+## Live Demo
 
-![Feature Importance](images/Images_Feature_Importance.png)
+(Add your deployed link here after deployment)
 
----
+## Author
 
-### Transaction Amount Distribution
-This illustrates the spread and density of transaction values, helping to identify specific amount ranges where fraud is more prevalent.
-
-![Transaction Amount Distribution](images/Images_Transaction_Amount_Distribution.png)
-
-
+Shivam Gupta
