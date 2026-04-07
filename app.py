@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from pipeline import run_pipeline
 
-st.title(" Credit Card Fraud  ML Project")
+st.title("ML Classification Web App")
 
 file = st.file_uploader("Upload CSV File")
 
