@@ -2,6 +2,11 @@
 
 This project is an end-to-end machine learning web application built using Streamlit.
 
+## Live Demo
+
+App Link : https://ml-classification-web-app-shivam.streamlit.app
+
+
 ## Overview
 
 This application allows users to upload any CSV dataset, select a target column, and automatically train multiple machine learning models to find the best one.
@@ -41,10 +46,6 @@ pip install -r requirements.txt
 
 2. Run app:
 streamlit run app.py
-
-## Live Demo
-
-App Link : https://ml-classification-web-app-shivam.streamlit.app
 
 ## Author
 
