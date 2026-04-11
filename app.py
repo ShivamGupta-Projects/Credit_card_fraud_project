@@ -16,24 +16,14 @@ from pipeline import run_pipeline
 
 st.title("ML Classification Web App")
 
-st.info("""
+st.warning("""
+Upload a valid CSV file for fraud and casual prediction.
 
-This application is designed for Credit Card Fraud Detection datasets.
+Make sure your dataset has a target column with only 0 and 1 values 
+. The data should be clean, properly formatted, 
+and should not contain incorrect or mixed values.
 
-Ensure the following before uploading:
-
-- CSV file format only
-- Target column must be binary (0/1)
-- Dataset should contain only numeric features (no text columns)
-- Minimum 50 records recommended for better model performance
-- No missing or invalid values (handle before uploading)
-
-Limitations:
-- The model assumes clean and preprocessed data
-- Unexpected columns or formats may cause errors
-
-For best results, use structured fraud datasets similar to training data.
-
+Incorrect data format may cause errors or wrong predictions.
 """)
 
 file = st.file_uploader("Upload CSV File")
