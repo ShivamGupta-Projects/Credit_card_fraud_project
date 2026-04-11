@@ -86,15 +86,15 @@ if file is not None:
 
         st.write(best_name.replace('_',' ').title())
 
-        st.write("Accuracy", metrics["accuracy"])
+        st.write("Accuracy", best["accuracy"])
 
         st.write("Classification Report")
-        report_df = pd.DataFrame(metrics["report"]).transpose()
+        report_df = pd.DataFrame(best["report"]).transpose()
         st.dataframe(report_df)
 
         st.write("Confusion Matrix")
         fig, ax = plt.subplots()
-        sns.heatmap(metrics["cm"], annot=True, fmt='d', cmap = "Blues", ax=ax)
+        sns.heatmap(best["cm"], annot=True, fmt='d', cmap = "Blues", ax=ax)
         st.pyplot(fig)
 
         st.subheader("Target Distribution")
