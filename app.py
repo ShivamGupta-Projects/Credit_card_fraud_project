@@ -79,26 +79,23 @@ if file is not None:
         for col, count in result["outliers"].items():
             st.write(f"{col} has {int(count)} outliers")
 
-        st.subheader("Model Results")
-
-        for name, metrics in result["results"].items():
-          st.subheader(name.replace('_',' ').title())
-
-          st.write("Accuracy", metrics["accuracy"])
-
-          st.write("Classification Report")
-          report_df = pd.DataFrame(metrics["report"]).transpose()
-          st.dataframe(report_df)
-
-          st.write("Confusion Matrix")
-          fig, ax = plt.subplots()
-          sns.heatmap(metrics["cm"], annot=True, fmt='d', cmap = "Blues", ax=ax)
-          st.pyplot(fig)
-
-          st.markdown("---")
-
         st.subheader("Best Model")
-        st.write(result["best_model_name"].replace("_"," ").title())
+
+        best_name = result["best_model_name"]
+        best = result["results"][best_name]
+
+        st.write(best_name.replace('_',' ').title())
+
+        st.write("Accuracy", metrics["accuracy"])
+
+        st.write("Classification Report")
+        report_df = pd.DataFrame(metrics["report"]).transpose()
+        st.dataframe(report_df)
+
+        st.write("Confusion Matrix")
+        fig, ax = plt.subplots()
+        sns.heatmap(metrics["cm"], annot=True, fmt='d', cmap = "Blues", ax=ax)
+        st.pyplot(fig)
 
         st.subheader("Target Distribution")
 
