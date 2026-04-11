@@ -103,16 +103,16 @@ if file is not None:
 
         for key,value in counts.items():
           st.write(f"{key}: {value}")
-    st.subheader("Predict Fraud for New Transaction")
+   st.subheader("Predict Fraud for New Transaction")
 
-    input_data = {}
+   input_data = {}
 
-    for col in df.columns:
+   for col in df.columns:
        if col == result["target"]:
           continue
        input_data[col] = st.text_input(f"Enter {col}")
 
-    if st.button("Predict Fraud", key="fraud_btn"):
+   if st.button("Predict Fraud", key="fraud_btn"):
 
        input_df = pd.DataFrame([input_data])
 
